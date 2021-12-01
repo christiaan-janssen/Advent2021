@@ -5,7 +5,7 @@ from utils.tools import get_input
 
 def puzzle_01():
     """Calculate the sonar depth increase."""
-    data = get_input("day01.input", "\n")
+    data = get_input("day1.input", "\n")
     data = [int(val) for val in data[:-1]]
     count = 0
     for i, var in enumerate(data):
@@ -17,7 +17,8 @@ def puzzle_01():
 
 
 def puzzle_02():
-    input = get_input("day01.input", "\n")
+    """Calculate the sonar depth increase."""
+    input = get_input("day1.input", "\n")
     count = 0
     data = [int(val) for val in input[:-1]]
     for i, var in enumerate(data):

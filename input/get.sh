@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd "$(dirname "$0")"
+#cd "$(dirname "$0")"
 
 if [ -r .cookie ]; then
   . .cookie
@@ -16,7 +16,7 @@ for day in {1..25}; do
   if [ "$thisyear" -ne "$year" -o "$thismonth" -ne 12 -o "$day" -gt "$thisday" ]; then
     exit 0
   fi
-  filename="$day".input
+  filename=day"$day".input
   if [ -r "$filename" ]; then
     continue  # make sure we don't fetch the same file twice!
   fi
