@@ -31,9 +31,9 @@ def parse_input(line: str) -> Tuple:
 
 
 def puzzle_01() -> int:
-    #data = get_input("day2.input", " ")
+    data = get_input("day2.input", "\n")
     total_x, total_y = 0, 0
-    for line in test_input:
+    for line in data:
         x, y = parse_input(line)
         total_x += x
         total_y += y
