@@ -42,10 +42,18 @@ def puzzle_01() -> int:
 
 
 def puzzle_02():
-    data = get_input("day2.input", " ")
-    print(data)
+    data = get_input("day2.input", "\n")
+    total_x, total_y, aim = 0,0,0
+
+    for line in data:
+        x, y = parse_input(line)
+        total_x += x
+        aim += y
+        total_y += aim * x
+
+    return abs(total_x * total_y)
 
 
 if __name__ == "__main__":
     print(f"Day 02 a: {puzzle_01()}")
-    # puzzle_02()
+    print(f"Day 02 b: {puzzle_02()}")
